@@ -1,1 +1,3 @@
-console.log("working");
+import loadPage from "./load";
+
+loadPage();
