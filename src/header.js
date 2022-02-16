@@ -20,6 +20,8 @@ export default function header()
            
         </div>
     */
+
+        // TODO: add stylesheet
     const header = document.createElement('div');
     header.id = "header-wrapper";
 
