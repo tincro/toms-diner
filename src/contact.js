@@ -8,11 +8,11 @@ export default function contact () {
             <div id="contact">
             </div>
             <div id="social">
-                <ol>
+                <ul>
                     <li>Facebook</li>
                     <li>Instagram</li>
                     <li>TikTok</li>
-                </ol>
+                </ul>
                 // social media
             </div>
         </div>
@@ -26,12 +26,12 @@ export default function contact () {
     // Add sidebar to include social media
     // TODO: Add social images
     const sidebar = document.createElement('div');
-    const sidebarList = document.createElement('ol');
+    const sidebarList = document.createElement('ul');
     const socialList = ["Facebook", "Instagram","TikTok"];
 
-    for (let i=0; i < socialList.length;i++){
+    for (let social of socialList){
         let socialItem = document.createElement("li");
-        socialItem.innerHTML = socialList[i];
+        socialItem.innerHTML = social;
         sidebarList.appendChild(socialItem);
     }
     sidebar.appendChild(sidebarList);

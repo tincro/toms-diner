@@ -1,9 +1,16 @@
 import TomsDiner from "./toms-diner.jpg";
+import navBar from "./nav";
 
 
 export default function header()
 {
     /*  <div id="header-wrapper>
+            <nav>
+                <ul>
+                    <li>Menu</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
             <div id="header-title">
                 <h1>Tom's Diner</h1>
             </div>
@@ -15,6 +22,8 @@ export default function header()
     */
     const header = document.createElement('div');
     header.id = "header-wrapper";
+
+    const navBar = navBar();
 
     const headerTitle = document.createElement('div');
     headerTitle.id = 'header-title';
@@ -30,6 +39,7 @@ export default function header()
     headerImg.src = TomsDiner;
     headerImgWrapper.appendChild(headerImg);
 
+    header.appendChild(navBar);
     header.appendChild(headerTitle);
     header.appendChild(headerImgWrapper);
     

@@ -11,11 +11,11 @@ export default function menu() {
             
             </div>
             <div id="side-bar">
-                <ol>
+                <ul>
                     <li>Soda</li>
                     <li>Coffee</li>
                     <li>Tea</li>
-                </ol>
+                </ul>
             </div>
         </div>
     */
@@ -30,11 +30,11 @@ export default function menu() {
     // Add sidebar to include drinks TODO: add prices
     const sidebar = document.createElement('div');
     const drinksList = ["Coffee", "Soda", "Tea"];
-    const list = document.createElement('ol');
+    const list = document.createElement('ul');
 
-    for (let i=0; i < drinksList.length; i++){
+    for (let drink of drinkList){
         let item = document.createElement('li');
-        item.innerHTML = drinksList[i];
+        item.innerHTML = drink;
         list.appendChild(item);
     }
     sidebar.appendChild(list);
