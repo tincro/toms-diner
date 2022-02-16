@@ -7,6 +7,10 @@ export default function menu() {
             // desserts
             // sidebar 
 
+            <div id="menu-title">
+                <h2>MENU</h2
+            </div>
+
             <div id="menu-items">
             
             </div>
@@ -22,6 +26,13 @@ export default function menu() {
     
     const element = document.createElement('div');
     element.id = "menu-wrapper";
+
+    // adding title MENU here
+    const titleWrapper = document.createElement('div')
+    const title = document.createElement('h1');
+    title.innerHTML = "Menu";
+
+    titleWrapper.appendChild(title);
 
     // Add menu items in blocks for each time of day
     // TODO: add actual items in each list
@@ -39,6 +50,7 @@ export default function menu() {
     }
     sidebar.appendChild(list);
     
+    element.appendChild(titleWrapper);
     element.appendChild(menuItemsWrapper);
     element.appendChild(sidebar);
 
