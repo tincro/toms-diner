@@ -1,4 +1,4 @@
-export default function navBar(){
+export default function navBar() {
     const navBar = document.createElement('nav');
     const navList = document.createElement('ul');
     const navTabs = ["Menu", "Contact"];
@@ -9,4 +9,6 @@ export default function navBar(){
         navList.appendChild(navItem);
     }
     navBar.appendChild(navList);
+
+    return navBar;
 }

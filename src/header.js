@@ -23,7 +23,7 @@ export default function header()
     const header = document.createElement('div');
     header.id = "header-wrapper";
 
-    const navBar = navBar();
+    const nav = navBar();
 
     const headerTitle = document.createElement('div');
     headerTitle.id = 'header-title';
@@ -39,7 +39,7 @@ export default function header()
     headerImg.src = TomsDiner;
     headerImgWrapper.appendChild(headerImg);
 
-    header.appendChild(navBar);
+    header.appendChild(nav);
     header.appendChild(headerTitle);
     header.appendChild(headerImgWrapper);
     
