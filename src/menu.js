@@ -29,7 +29,7 @@ export default function menu() {
 
     // adding title MENU here
     const titleWrapper = document.createElement('div')
-    const title = document.createElement('h1');
+    const title = document.createElement('h2');
     title.innerHTML = "Menu";
 
     titleWrapper.appendChild(title);

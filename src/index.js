@@ -1,10 +1,7 @@
 import loadPage from "./load";
 import menu from "./menu";
 import contact from "./contact";
-
-// add events to listen for tab switching
-// function to clear out the current content
-// add new content of the tab that was clicked
+import mainContent from "./main-content";
 
 function replaceContent (e) {
 
@@ -15,7 +12,10 @@ function replaceContent (e) {
     return content;
 }
 
-loadPage();
+ loadPage();
+
+ const homeNav = document.getElementById('header-title');
+ homeNav.addEventListener('click', function(){replaceContent(mainContent)});
 
 const menuNav = document.getElementById('menu');
 menuNav.addEventListener('click', function(){replaceContent(menu)});

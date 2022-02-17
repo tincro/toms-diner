@@ -4,11 +4,10 @@ export default function mainContent () {
    
 /* 
     <div >
-        <div main-img>
-            <img>
-        </div>
+         <div id="main-img">
+                <img src="./toms-diner.jpg">    
+            </div>
         <div id="main-desc">
-
             <p> 
                 This place is the best diner in the Midwest. Folks come from miles around to eat here.
                 Even when passing through, this local grub-hub is the diamond in the rough that is a pleasant surprise to any adventure.

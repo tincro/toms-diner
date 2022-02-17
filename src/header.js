@@ -13,10 +13,6 @@ export default function header()
             <div id="header-title">
                 <h1>Tom's Diner</h1>
             </div>
-            <div id="main-img">
-                <img src="./toms-diner.jpg">    
-            </div>
-           
         </div>
     */
 
