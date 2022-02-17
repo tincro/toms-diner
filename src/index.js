@@ -7,12 +7,11 @@ import contact from "./contact";
 // add new content of the tab that was clicked
 
 function replaceContent (e) {
-    const homeContent = document.getElementById('home-content');
-    homeContent.remove();
-    
+
     const content = document.getElementById('content');
-    content.appendChild(e());
-    
+    const nodeList = content.children;  
+    content.replaceChild(e(), nodeList[1]);
+
     return content;
 }
 
@@ -22,5 +21,5 @@ const menuNav = document.getElementById('menu');
 menuNav.addEventListener('click', function(){replaceContent(menu)});
 
 const contactNav = document.getElementById('contact');
-contactNav.addEventListener('click', replaceContent);
+contactNav.addEventListener('click',function(){replaceContent(contact)});
 
