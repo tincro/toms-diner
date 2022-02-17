@@ -12,6 +12,9 @@ export default function menu() {
             </div>
 
             <div id="menu-items">
+                <div>
+                    <h3>Breakfast</h3>
+                </div>
             
             </div>
             <div id="side-bar">
@@ -37,10 +40,25 @@ export default function menu() {
     // Add menu items in blocks for each time of day
     // TODO: add actual items in each list
     const menuItemsWrapper = document.createElement('div');
+    menuItemsWrapper.id = "menu-items";
+    const mealsList = ["Breakfast", "Lunch", "Dinner", "Dessert"];
+    for (let meal of mealsList){
+        let menuSection = document.createElement('div')
+        menuSection.id = meal;
+        let menuTitle = document.createElement('h3');
+        menuTitle.innerHTML = meal;
+
+        menuSection.appendChild(menuTitle);
+        menuItemsWrapper.appendChild(menuSection);
+    }
 
     // Add sidebar to include drinks TODO: add prices
     const sidebar = document.createElement('div');
     const drinkList = ["Coffee", "Soda", "Tea"];
+    const drinkTitle = document.createElement('h3');
+    drinkTitle.innerHTML = "Beverages";
+    sidebar.appendChild(drinkTitle);
+    
     const list = document.createElement('ul');
 
     for (let drink of drinkList){
