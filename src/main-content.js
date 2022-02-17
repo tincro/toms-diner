@@ -1,25 +1,43 @@
+import TomsDiner from "./toms-diner.jpg";
 
 export default function mainContent () {
    
 /* 
-    <div id="main-desc">
+    <div >
+        <div main-img>
+            <img>
+        </div>
+        <div id="main-desc">
 
-        <p> 
-            This place is the best diner in the Midwest. Folks come from miles around to eat here.
-            Even when passing through, this local grub-hub is the diamond in the rough that is a pleasant surprise to any adventure.
-        </p>
+            <p> 
+                This place is the best diner in the Midwest. Folks come from miles around to eat here.
+                Even when passing through, this local grub-hub is the diamond in the rough that is a pleasant surprise to any adventure.
+            </p>
+        </div>
     </div>
 
 */
     const mainContentWrapper = document.createElement('div');
+    mainContentWrapper.id = "home-content";
 
-    mainContentWrapper.id = "main-desc";
+    const headerImgWrapper = document.createElement('div');
+    headerImgWrapper.id ="main-img";
+
+    const headerImg = new Image();
+    headerImg.src = TomsDiner;
+    headerImgWrapper.appendChild(headerImg);
+
+    const blurbWrapper = document.createElement('div');
+    blurbWrapper.id = "main-desc";
 
     const blurb = document.createElement('p');
-    blurb.innerText = `This place is the best diner in the Midwest. Folks come from miles around to eat here.
+    blurb.innerHTML = `This place is the best diner in the Midwest. Folks come from miles around to eat here.
     Even when passing through, this local grub-hub is the diamond in the rough that is a pleasant surprise to any adventure.`;
     
-    mainContentWrapper.appendChild(blurb);
+    blurbWrapper.appendChild(blurb);
+
+    mainContentWrapper.appendChild(headerImgWrapper);
+    mainContentWrapper.appendChild(blurbWrapper);
 
     return mainContentWrapper;
 }

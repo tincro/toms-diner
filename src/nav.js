@@ -1,6 +1,6 @@
 export default function navBar() {
     //  TODO: Add stylesheet
-    
+
     const navBar = document.createElement('nav');
     const navList = document.createElement('ul');
     const navTabs = ["Menu", "Contact"];
@@ -8,6 +8,7 @@ export default function navBar() {
         let navItem = document.createElement('li');
         let navItemLink = document.createElement('a');
         navItemLink.innerHTML = nav;
+        navItemLink.id = nav.toLowerCase();
         navItemLink.href = "#";
 
 
