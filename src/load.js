@@ -8,7 +8,7 @@ export default function loadPage() {
 
     content.appendChild(header());
     content.appendChild(mainContent());
-    content.appendChild(footer);
+    content.appendChild(footer());
 
     return content;
 }

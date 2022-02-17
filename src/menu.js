@@ -40,7 +40,7 @@ export default function menu() {
 
     // Add sidebar to include drinks TODO: add prices
     const sidebar = document.createElement('div');
-    const drinksList = ["Coffee", "Soda", "Tea"];
+    const drinkList = ["Coffee", "Soda", "Tea"];
     const list = document.createElement('ul');
 
     for (let drink of drinkList){
