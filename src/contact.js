@@ -1,9 +1,8 @@
+import './style.css';
+
 export default function contact () {
     /*
         <div id="contact-wrapper">
-            // name
-            // email
-            // message
             // social sidebar ? 
             <div id="contact-title">
                 <h2>CONTACT US</h2
