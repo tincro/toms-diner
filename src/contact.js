@@ -33,10 +33,35 @@ export default function contact () {
     titleWrapper.appendChild(title);
 
     // TODO: build out contact interface
+    // TODO: Refactor for more concise code
     const contact = document.createElement('div');
     // name
     // email
     // message
+    const form = document.createElement('form');
+    
+    const nameLabel = document.createElement('label');
+    nameLabel.htmlFor = "fname";
+    const name = document.createElement('input');
+    name.type = "text";
+    name.placeholder = "Name"
+    nameLabel.appendChild(name);
+    form.appendChild(nameLabel);
+
+    const email = document.createElement('input');
+    email.type = "email";
+    email.placeholder = "Email";
+    form.appendChild(email);
+
+    const messageLabel = document.createElement('label');
+    messageLabel.htmlFor = "message";
+    const message = document.createElement('input');
+    message.type = "text";
+    message.placeholder = "Message";
+    messageLabel.appendChild(message);
+    form.appendChild(messageLabel);
+
+    contact.appendChild(form);
 
     
 
