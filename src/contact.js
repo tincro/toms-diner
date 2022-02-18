@@ -32,12 +32,8 @@ export default function contact () {
 
     titleWrapper.appendChild(title);
 
-    // TODO: build out contact interface
     // TODO: Refactor for more concise code
     const contact = document.createElement('div');
-    // name
-    // email
-    // message
     const form = document.createElement('form');
     
     const nameLabel = document.createElement('label');
