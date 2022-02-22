@@ -30,35 +30,42 @@ export default function contact () {
     title.innerHTML = "Contact";
 
     titleWrapper.appendChild(title);
+    element.appendChild(titleWrapper);
 
     // TODO: Refactor for more concise code
     const contact = document.createElement('div');
     const form = document.createElement('form');
+    const field = document.createElement('fieldset');
+    form.appendChild(field);
+    contact.appendChild(form);
     
     const nameLabel = document.createElement('label');
     nameLabel.htmlFor = "fname";
+    nameLabel.innerText = "Your Name: ";
+    field.appendChild(nameLabel);
+
     const name = document.createElement('input');
     name.type = "text";
-    name.placeholder = "Name"
+    name.name = "name";
+    name.placeholder = "John Smith";
     nameLabel.appendChild(name);
-    form.appendChild(nameLabel);
+
+    const emailLabel = document.createElement('label');
+    emailLabel.innerText = "Your Email: ";
 
     const email = document.createElement('input');
     email.type = "email";
-    email.placeholder = "Email";
-    form.appendChild(email);
+    email.placeholder = "johnsmith@example.com";
+    emailLabel.appendChild(email);
+    field.appendChild(emailLabel);
 
     const messageLabel = document.createElement('label');
     messageLabel.htmlFor = "message";
-    const message = document.createElement('input');
-    message.type = "text";
-    message.placeholder = "Message";
+    messageLabel.innerText = "Leave us a message: "
+    const message = document.createElement('textarea');
+    message.placeholder = "Amazing food...";
     messageLabel.appendChild(message);
-    form.appendChild(messageLabel);
-
-    contact.appendChild(form);
-
-    
+    field.appendChild(messageLabel);
 
     // Add sidebar to include social media
     // TODO: Add social images
@@ -73,7 +80,7 @@ export default function contact () {
     }
     sidebar.appendChild(sidebarList);
 
-    element.appendChild(titleWrapper);
+    
     element.appendChild(contact);
     element.appendChild(sidebar);
 

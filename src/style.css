@@ -1,4 +1,4 @@
-* {
+/* * {
     margin:0;
     padding: 0;
     box-sizing: border-box;
@@ -21,7 +21,7 @@ li a {
 }
 
 /* ---------------- HEADER ---------------- */
-#header-wrapper {
+/* #header-wrapper {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -38,24 +38,16 @@ nav {
 nav li {
     display: inline;
 }
-
-/* ---------------- /HEADER ---------------- */
-
+ */
 
 /* ---------------- MAIN-CONTENT ---------------- */
-
+/* 
 #main-desc {
     margin: 35px;
-}
-
-/* ---------------- /MAIN-CONTENT ---------------- */
-
-
-
-
+} */
 
 /* ---------------- FOOTER ---------------- */
-#footer {
+/* #footer {
     background-color: dimgray;
     display: block;
     margin-bottom: 15px;
@@ -64,6 +56,5 @@ nav li {
 }
 #footer p {
     text-align: center;
-}
+} */
 
-/* ---------------- /FOOTER ---------------- */
