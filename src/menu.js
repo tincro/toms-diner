@@ -39,30 +39,42 @@ export default function menu() {
 
     // Add menu items in blocks for each time of day
     // TODO: add actual items in each list
-    const menuItemsWrapper = document.createElement('div');
+    const menuItemsWrapper = document.createElement('section');
     menuItemsWrapper.id = "menu-items";
-    const mealsList = ["Breakfast", "Lunch", "Dinner", "Dessert"];
-    for (let meal of mealsList){
-        let menuSection = document.createElement('div')
-        menuSection.id = meal;
+    const mealsListObj = {
+        Breakfast: ["eggs", "bacon", "pancakes"],
+        Lunch: ["burger","salad", "chicken tenders"],
+        Dinner: ["salmon", "ribeye", "pasta"],
+        Dessert: ["apple pie", "cherry pie"],
+    }
+    for(const [k, v] of Object.entries(mealsListObj)){
+        console.log(k, v);
+        let menuSection = document.createElement('article');
+        menuSection.id = k;
         let menuTitle = document.createElement('h3');
-        menuTitle.innerHTML = meal;
-
+        menuTitle.innerText = k;
         menuSection.appendChild(menuTitle);
-        menuItemsWrapper.appendChild(menuSection);
+
+        for(const mealItem of v){
+            let item = document.createElement('p');
+            item.innerText = mealItem;
+            menuSection.appendChild(item);
+        }
+
+        menuItemsWrapper.append(menuSection);
     }
 
     // Add sidebar to include drinks TODO: add prices
-    const sidebar = document.createElement('div');
+    const sidebar = document.createElement('section');
     const drinkList = ["Coffee", "Soda", "Tea"];
     const drinkTitle = document.createElement('h3');
     drinkTitle.innerHTML = "Beverages";
     sidebar.appendChild(drinkTitle);
     
-    const list = document.createElement('ul');
+    const list = document.createElement('article');
 
     for (let drink of drinkList){
-        let item = document.createElement('li');
+        let item = document.createElement('p');
         item.innerHTML = drink;
         list.appendChild(item);
     }
