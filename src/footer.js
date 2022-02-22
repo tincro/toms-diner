@@ -3,7 +3,7 @@ export default function footer() {
     //     copyright 2022
     // </div>
 
-    const footerWrapper = document.createElement('div');
+    const footerWrapper = document.createElement('footer');
     footerWrapper.id = "footer"
 
     const footerContent = document.createElement('p');

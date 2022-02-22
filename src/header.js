@@ -17,7 +17,7 @@ export default function header()
     */
 
         // TODO: add stylesheet
-    const header = document.createElement('div');
+    const header = document.createElement('header');
     header.id = "header-wrapper";
 
     const nav = navBar();

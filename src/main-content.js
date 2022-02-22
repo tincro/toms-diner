@@ -16,7 +16,7 @@ export default function mainContent () {
     </div>
 
 */
-    const mainContentWrapper = document.createElement('div');
+    const mainContentWrapper = document.createElement('section');
     mainContentWrapper.id = "home-content";
 
     const headerImgWrapper = document.createElement('div');
@@ -26,15 +26,20 @@ export default function mainContent () {
     headerImg.src = TomsDiner;
     headerImgWrapper.appendChild(headerImg);
 
-    const blurbWrapper = document.createElement('div');
-    blurbWrapper.id = "main-desc";
+    const blurbWrapper = document.createElement('article');
+    blurbWrapper.id = "about";
 
-    const blurb = document.createElement('p');
-    blurb.innerHTML = `This place is the best diner in the Midwest. Folks come from miles around to eat here.
-    Even when passing through, this local grub-hub is the diamond in the rough that is a pleasant surprise to any adventure.`;
+    const blurbContent = [
+        "This place is the best diner in the Midwest. Folks come from miles around to eat here. Even when passing through, this local grub-hub is the diamond in the rough that is a pleasant surprise to any adventure.",
+        "Our modern approach to classic diner-style experience will definitely be something to experience whether you are a local, new in town, or just passing through.",
+    ]
+
+    for(const p of blurbContent){
+        const blurb = document.createElement('p');
+        blurb.innerText = p;   
+        blurbWrapper.appendChild(blurb);
+    }
     
-    blurbWrapper.appendChild(blurb);
-
     mainContentWrapper.appendChild(headerImgWrapper);
     mainContentWrapper.appendChild(blurbWrapper);
 
