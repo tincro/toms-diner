@@ -1,21 +1,6 @@
 import TomsDiner from "./toms-diner.jpg";
 
 export default function mainContent () {
-   
-/* 
-    <div id="home-content">
-         <div id="main-img">
-                <img src="./toms-diner.jpg">    
-            </div>
-        <div id="main-desc">
-            <p> 
-                This place is the best diner in the Midwest. Folks come from miles around to eat here.
-                Even when passing through, this local grub-hub is the diamond in the rough that is a pleasant surprise to any adventure. Find your little
-            </p>
-        </div>
-    </div>
-
-*/
     const mainContentWrapper = document.createElement('section');
     mainContentWrapper.id = "home-content";
 
@@ -25,12 +10,19 @@ export default function mainContent () {
     const headerImg = new Image();
     headerImg.src = TomsDiner;
     headerImgWrapper.appendChild(headerImg);
+    mainContentWrapper.appendChild(headerImgWrapper);
 
     const blurbWrapper = document.createElement('article');
     blurbWrapper.id = "about";
 
+    const homepageTitle = document.createElement('h1');
+    homepageTitle.innerText = "Welcome Home";
+    homepageTitle.classList.add("section-header");
+    mainContentWrapper.appendChild(homepageTitle);
+
     const blurbContent = [
         "This place is the best diner in the Midwest. Folks come from miles around to eat here. Even when passing through, this local grub-hub is the diamond in the rough that is a pleasant surprise to any adventure.",
+        "You won't find a friendlier bunch of misfits to welcome you to a warm meal and comfortable atmosphere.",
         "Our modern approach to classic diner-style experience will definitely be something to experience whether you are a local, new in town, or just passing through.",
     ]
 
@@ -40,7 +32,6 @@ export default function mainContent () {
         blurbWrapper.appendChild(blurb);
     }
     
-    mainContentWrapper.appendChild(headerImgWrapper);
     mainContentWrapper.appendChild(blurbWrapper);
 
     return mainContentWrapper;

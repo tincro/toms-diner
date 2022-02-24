@@ -29,29 +29,33 @@ export default function menu() {
     
     const element = document.createElement('div');
     element.id = "menu-wrapper";
+    element.classList.add("main-content");
 
     // adding title MENU here
-    const titleWrapper = document.createElement('div')
-    const title = document.createElement('h2');
+    const titleWrapper = document.createElement('div');
+    titleWrapper.classList.add("section-header"); 
+    const title = document.createElement('h1');
     title.innerHTML = "Menu";
 
     titleWrapper.appendChild(title);
 
-    // Add menu items in blocks for each time of day
-    // TODO: add actual items in each list
+    // menu items
     const menuItemsWrapper = document.createElement('section');
     menuItemsWrapper.id = "menu-items";
+    menuItemsWrapper.classList.add("menu-list");
     const mealsListObj = {
         Breakfast: ["eggs", "bacon", "pancakes"],
         Lunch: ["burger","salad", "chicken tenders"],
         Dinner: ["salmon", "ribeye", "pasta"],
-        Dessert: ["apple pie", "cherry pie"],
+        Dessert: ["apple pie", "cherry pie", "pumpkin pie"],
     }
+    // populate each course menu
     for(const [k, v] of Object.entries(mealsListObj)){
         console.log(k, v);
         let menuSection = document.createElement('article');
-        menuSection.id = k;
-        let menuTitle = document.createElement('h3');
+        menuSection.id = k.toLowerCase();
+        menuSection.classList.add('menu-box');
+        let menuTitle = document.createElement('h2');
         menuTitle.innerText = k;
         menuSection.appendChild(menuTitle);
 
@@ -66,6 +70,7 @@ export default function menu() {
 
     // Add sidebar to include drinks TODO: add prices
     const sidebar = document.createElement('section');
+    sidebar.classList.add("sidebar");
     const drinkList = ["Coffee", "Soda", "Tea"];
     const drinkTitle = document.createElement('h3');
     drinkTitle.innerHTML = "Beverages";
