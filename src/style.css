@@ -24,6 +24,7 @@ header {
     text-align: center;
 }
 
+/* HEADER-NAV */
 #header-title, nav {
     width: 50%;
     display: inline-block;  
@@ -32,8 +33,8 @@ header {
 nav a {
     text-decoration: none;
     padding: 12px   ;
-    color: brown;
-    background-color: blanchedalmond;    
+    background-color: brown;
+    color: blanchedalmond;    
 }
 
 nav ul {
@@ -46,9 +47,13 @@ nav li {
     display: inline-block;
     padding: 12px 0;
 }
+
+#main-img {
+    margin-bottom: 25px;
+    max-width: 100%;
+}
 /* MID-SECTION MAIN-CONTENT CONTAINER */
 .main-content {
-    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -118,24 +123,58 @@ footer {
 fieldset {
     margin: 0 auto;
     width: 50%;
+    padding: 12px;
+    border: none;
 }
 
-input {
+input, textarea {
     width: 100%;
     padding: 7px;
     border-radius: 5px;
+    font-size: 16px;    
+    margin-bottom: 15px;
+}
 
+textarea {
+    width: 100%;
+}
+
+input[type=submit] {
+    width: 33%;
+    background-color: brown;
+    color: white;  
+}
+
+#socials-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px;
 }
 
 #socials {
     margin: 0 auto;
-    display: block;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #socials li {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 14px;
+}
+
+#socials a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 400px){
+    fieldset{
+        width: 100%;
+    }
+    #socials-wrapper {
+        width: 100%;
+    }
 }
 
 

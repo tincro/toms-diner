@@ -51,20 +51,29 @@ export default function contact () {
     message.rows = 15;
     messageLabel.appendChild(message);
     field.appendChild(messageLabel);
+
+    const submit = document.createElement('input');
+    submit.type = 'submit';
+    submit.innerText = "Submit";
+    field.appendChild(submit);
     
     element.appendChild(contact);
 
     // Add sidebar to include social media
     // TODO: Add social images
     const sidebar = document.createElement('div');
+    sidebar.id="socials-wrapper";
 
     const sidebarList = document.createElement('ul');
     sidebarList.id = "socials";
     const socialList = ["Facebook", "Instagram","TikTok"];
 
     for (let social of socialList){
-        let socialItem = document.createElement("li");
-        socialItem.innerHTML = social;
+        let socialItem = document.createElement('li');
+        let socialItemLink = document.createElement('a');
+        socialItemLink.innerText = social;
+        socialItemLink.href = "#";
+        socialItem.appendChild(socialItemLink);
         sidebarList.appendChild(socialItem);
     }
     sidebar.appendChild(sidebarList);
