@@ -1,33 +1,15 @@
 import './style.css';
 
 export default function contact () {
-    /*
-        <div id="contact-wrapper">
-            // social sidebar ? 
-            <div id="contact-title">
-                <h2>CONTACT US</h2
-            </div>
-            <div id="contact">
-                // add interface here
-            </div>
-            <div id="social">
-                <ul>
-                    <li>Facebook</li>
-                    <li>Instagram</li>
-                    <li>TikTok</li>
-                </ul>
-                // social media
-            </div>
-        </div>
-    */
-
    const element = document.createElement('div');
    element.id = "contact-wrapper";
+   element.classList.add("main-content");
 
         // adding title CONTACT
     const titleWrapper = document.createElement('div');
     const title = document.createElement('h2');
     title.innerHTML = "Contact";
+    title.classList.add("section-header");
 
     titleWrapper.appendChild(title);
     element.appendChild(titleWrapper);
@@ -64,13 +46,20 @@ export default function contact () {
     messageLabel.innerText = "Leave us a message: "
     const message = document.createElement('textarea');
     message.placeholder = "Amazing food...";
+    message.id = "message";
+    message.cols = 50;
+    message.rows = 15;
     messageLabel.appendChild(message);
     field.appendChild(messageLabel);
+    
+    element.appendChild(contact);
 
     // Add sidebar to include social media
     // TODO: Add social images
     const sidebar = document.createElement('div');
+
     const sidebarList = document.createElement('ul');
+    sidebarList.id = "socials";
     const socialList = ["Facebook", "Instagram","TikTok"];
 
     for (let social of socialList){
@@ -79,10 +68,9 @@ export default function contact () {
         sidebarList.appendChild(socialItem);
     }
     sidebar.appendChild(sidebarList);
+    element.appendChild(sidebar);
 
     
-    element.appendChild(contact);
-    element.appendChild(sidebar);
 
 
     return element;

@@ -72,7 +72,7 @@ export default function menu() {
     const sidebar = document.createElement('section');
     sidebar.classList.add("sidebar");
     const drinkList = ["Coffee", "Soda", "Tea"];
-    const drinkTitle = document.createElement('h3');
+    const drinkTitle = document.createElement('h2');
     drinkTitle.innerHTML = "Beverages";
     sidebar.appendChild(drinkTitle);
     
@@ -87,7 +87,7 @@ export default function menu() {
     
     element.appendChild(titleWrapper);
     element.appendChild(menuItemsWrapper);
-    element.appendChild(sidebar);
+    menuItemsWrapper.appendChild(sidebar);
 
     return element;
 }
